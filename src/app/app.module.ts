@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { TYAComponent } from './tya/tya.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TyaModule } from './tya/tya.module';
+import { AppMaterialModule } from 'src/app/Shared/Modules/app-material/app-material.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { HttpClient, HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,11 @@ import { TyaModule } from './tya/tya.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    TyaModule
+    TyaModule,
+    AppMaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // HttpClient
   ],
   providers: [],
   bootstrap: [AppComponent]
