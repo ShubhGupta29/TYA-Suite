@@ -11,7 +11,8 @@ import { AppBootstrapModule } from '../Shared/Modules/app-bootstrap/app-bootstra
   imports: [
     CommonModule,
     TyaRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    AppBootstrapModule
   ],schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],

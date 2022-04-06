@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TyaModule } from './tya/tya.module';
 import { AppMaterialModule } from 'src/app/Shared/Modules/app-material/app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppBootstrapModule } from 'src/app/Shared/Modules/app-bootstrap/app-bootstrap.module';
 // import { HttpClient, HTTP_INTERCEPTORS } from '../../node_modules/@angular/common/http';
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppMaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    AppBootstrapModule
     // HttpClient
   ],
   providers: [],
