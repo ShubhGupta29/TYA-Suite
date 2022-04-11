@@ -25,7 +25,7 @@
                         <div class="row">
   
                           <div class="col-4">
-                            <mat-form-field appearance="standard">
+                            <mat-form-field appearance="legacy">
                               <mat-label class="accent">Company Code</mat-label>
                               <input formControlName="companyCode" value="" matInput required
                                 placeholder="Enter Company Code">
@@ -53,7 +53,7 @@
                           <div class="col-4">
                             <mat-form-field appearance="legacy" required>
                               <mat-label>Company Limited By</mat-label>
-                              <mat-select [(ngModel)]="selectedValue" name="option1">
+                              <mat-select formControlName="companyLimitedBy" name="option1">
                                 <mat-option *ngFor="let option of options" [value]="option.value">
                                   {{option.viewValue}}
                                 </mat-option>
@@ -64,7 +64,7 @@
                           <div class="col-4">
                             <mat-form-field appearance="legacy" required>
                               <mat-label>Nature of Company</mat-label>
-                              <mat-select [(ngModel)]="selectedValue" name="option2">
+                              <mat-select formControlName="companyNature" name="option2">
                                 <mat-option *ngFor="let option of options" [value]="option.value">
                                   {{option.viewValue}}
                                 </mat-option>
