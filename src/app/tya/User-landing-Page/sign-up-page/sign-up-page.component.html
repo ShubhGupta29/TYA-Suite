@@ -1,0 +1,192 @@
+<div style="padding: 24px;">
+    <div class="container">
+      <div class="container-fluid">
+        <div class="row" style="box-shadow: 0px 0px 5px 4px rgb(189, 189, 189);">
+          <div class="col-lg-4" style="padding-left: 0;padding-right: 0;">
+            <div style="margin: 0;padding: 0;">
+              <img src="../assets/Images/HomeImage.JPG" alt="HomeImage" width="360px" height="612px">
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="container">
+              <div class="container-fluid">
+                <div style="padding: 24px;">
+                  <div style="text-align: center; ">
+                    <h1>Welcome</h1>
+  
+                    <h2>Signup with TYA Suite Account</h2>
+                  </div>
+                  <div style="text-align: center;">
+  
+                    <!-- Default form contact -->
+                    <form [formGroup]="signUpForm">
+  
+                      <div>
+                        <div class="row">
+  
+                          <div class="col-4">
+                            <mat-form-field appearance="standard">
+                              <mat-label class="accent">Company Code</mat-label>
+                              <input formControlName="companyCode" value="" matInput required
+                                placeholder="Enter Company Code">
+                            </mat-form-field>
+                          </div>
+  
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">Company Title</mat-label>
+                              <input formControlName="companyCode" value="" matInput required
+                                placeholder="Enter Company Title">
+                            </mat-form-field>
+                          </div>
+  
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">CIN</mat-label>
+                              <input formControlName="companyCode" value="" matInput required placeholder="Enter CIN">
+                            </mat-form-field>
+                          </div>
+  
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-4">
+                            <mat-form-field appearance="legacy" required>
+                              <mat-label>Company Limited By</mat-label>
+                              <mat-select [(ngModel)]="selectedValue" name="option1">
+                                <mat-option *ngFor="let option of options" [value]="option.value">
+                                  {{option.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+  
+                          <div class="col-4">
+                            <mat-form-field appearance="legacy" required>
+                              <mat-label>Nature of Company</mat-label>
+                              <mat-select [(ngModel)]="selectedValue" name="option2">
+                                <mat-option *ngFor="let option of options" [value]="option.value">
+                                  {{option.viewValue}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                          </div>
+  
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">Authorise Capital</mat-label>
+                              <input formControlName="authoriseCapital" value="" matInput required
+                                placeholder="Enter Authorise Capital">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">Paid Up Capital</mat-label>
+                              <input formControlName="paidUpCapital" value="" matInput required
+                                placeholder="Enter Paid Up Capital">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">Object of Company</mat-label>
+                              <input formControlName="objectOfCompany" value="" matInput required
+                                placeholder="Enter Object of Company">
+                            </mat-form-field>
+                          </div>
+                          <div class="col-4">
+                            <mat-form-field class="example-full-width" appearance="legacy" required>
+                              <mat-label class="accent">GST IN Number</mat-label>
+                              <input formControlName="gstNo" value="" matInput required placeholder="Enter GST IN Number">
+                            </mat-form-field>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                          <div class="col-4">
+                            <mat-label class="accent">Company Having</mat-label>
+  
+                            <br><br>
+                            <mat-radio-group aria-label="Select an option" formControlName="companyHaving">  
+                              <mat-radio-button value="1">Option 1</mat-radio-button>  
+                              <br><br>
+                              <mat-radio-button value="2">Option 2</mat-radio-button>  
+                              <br><br>
+                              <mat-radio-button value="3">Option 2</mat-radio-button>  
+  
+                            </mat-radio-group>  
+                            
+                          </div>
+                          <div class="col-4">
+                            Types of shares
+                            <div>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="acceptTerms" class="form-check-label">Equity</label>
+                              </div>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="acceptTerms" class="form-check-label">Preference</label>
+                              </div>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="acceptTerms" class="form-check-label">Debantures</label>
+                              </div>
+                            </div>
+  
+                            <!-- <label formArrayName="orders" *ngFor="let order of ordersFormArray.controls; let i = index">
+                              <mat-checkbox [formControlName]="i">  
+                                {{webData[i].name}}
+                              </mat-checkbox>
+                              <br/>
+                            </label> -->
+  
+                          </div>
+                          <div class="col-4">
+                            Listed
+                            <div>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="acceptTerms" class="form-check-label">Yes</label>
+                              </div>
+                              <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" />
+                                <label for="acceptTerms" class="form-check-label">No</label>
+                              </div>
+  
+                            </div>
+                          </div>
+  
+                        </div>
+  
+  
+                        <!-- Send button -->
+                        <div class="text-center mb-3">
+                          <button
+                            type="button"
+                            mdbBtn
+                            gradient="blue"
+                            block="true"
+                            rounded="true"
+                            
+                            mdbWavesEffect
+                          >
+                            Sign Up
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <!-- Default form contact -->
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
