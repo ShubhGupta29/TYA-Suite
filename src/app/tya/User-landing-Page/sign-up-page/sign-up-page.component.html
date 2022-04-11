@@ -111,9 +111,9 @@
                             <br><br>
                             <mat-radio-group aria-label="Select an option" formControlName="companyHaving">  
                               <mat-radio-button value="1">Option 1</mat-radio-button>  
-                              <br><br>
+                              <br>
                               <mat-radio-button value="2">Option 2</mat-radio-button>  
-                              <br><br>
+                              <br>
                               <mat-radio-button value="3">Option 2</mat-radio-button>  
   
                             </mat-radio-group>  
@@ -121,7 +121,7 @@
                           </div>
                           <div class="col-4">
                             Types of shares
-                            <div>
+                            <!-- <div>
                               <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" />
                                 <label for="acceptTerms" class="form-check-label">Equity</label>
@@ -134,8 +134,14 @@
                                 <input type="checkbox" class="form-check-input" />
                                 <label for="acceptTerms" class="form-check-label">Debantures</label>
                               </div>
-                            </div>
-  
+                            </div> -->
+                            <section class="example-section align-left" [formGroup]="toppings">
+                              <mat-checkbox formControlName="pepperoni">Pepperoni</mat-checkbox>
+                              <br>
+                              <mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox>
+                              <br>
+                              <mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox>
+                            </section>
                             <!-- <label formArrayName="orders" *ngFor="let order of ordersFormArray.controls; let i = index">
                               <mat-checkbox [formControlName]="i">  
                                 {{webData[i].name}}
@@ -160,21 +166,16 @@
                           </div>
   
                         </div>
-  
+  <br><br>
   
                         <!-- Send button -->
-                        <div class="text-center mb-3">
-                          <button
-                            type="button"
-                            mdbBtn
-                            gradient="blue"
-                            block="true"
-                            rounded="true"
+                        <div class="btn">
+                          Sign Up
+                        </div>
+                        <br><br>
+                        <div class="align-center font-small blue-text">
                             
-                            mdbWavesEffect
-                          >
-                            Sign Up
-                          </button>
+                            <a href="#" class="blue-text">Forgot Password?</a>
                         </div>
                       </div>
                     </form>

@@ -13,8 +13,16 @@ interface Options {
 })
 
 export class SignUpPageComponent implements OnInit {
+  toppings: FormGroup;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder) {
+    this.toppings = formBuilder.group({
+      pepperoni: false,
+      extracheese: false,
+      mushroom: false,
+    });
+
+   }
 
   signUpForm:FormGroup;
   selectedValue: string;
