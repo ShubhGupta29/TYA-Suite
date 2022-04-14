@@ -1,1 +1,111 @@
-<p>sign-up-page2 works!</p>
+<div style="padding: 24px;">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="row" style="box-shadow: 0px 0px 5px 4px rgb(189, 189, 189);border-radius: 2%;">
+          <mat-card style="width: 550px;height: 550px; margin: 0; padding: 0; ">
+
+            <div style="background-color:rgb(191, 226, 250);">
+              <mat-card-title style="padding: 32px 0 8px 16px;">
+                <span style="color: #023751;font-size: 18px;">TYASuite</span>
+              </mat-card-title>
+              <mat-card-subtitle style="padding: 0 0 8px 16px;">
+                <span style="font-weight: 600;font-size: 14px;">Sign up for </span>
+                <span style="color: orange;font-weight: 600;font-size: 14px;">TYASuite Full ERP Plan</span>
+                <br>
+                <br>
+                <div style="font-size: 11px;padding-bottom: 8px;">
+                  You will be on free trial for 30 days
+                </div>
+                <div style="font-size: 11px;padding-bottom: 8px;line-height: 14px;">
+                  The free trial plan is a full featured <b>Full ERP Plan</b> which gives you complete and unlimited
+                  access to all TYASuite Application for 30 days.
+                </div>
+                <div style="font-size: 11px;padding-bottom: 8px;line-height: 14px;">
+                  You can always choose a different plan later to purchase
+                </div>
+              </mat-card-subtitle>
+            </div>
+
+
+            <mat-card-content style="background-color: #ffffff;">
+              <div style="padding: 16px 0 8px 32px; align-items: center;">
+                <form [formGroup]="signUpForm2">
+                  <div class="row">
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">First name</mat-label>
+                        <input formControlName="firstName" value="" matInput required
+                          placeholder="Enter your First name">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">Last name</mat-label>
+                        <input formControlName="lastName" value="" matInput required placeholder="Enter your Last name">
+                      </mat-form-field>
+                    </div>
+
+                  </div>
+                  <div class="row">
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">Company name</mat-label>
+                        <input formControlName="companyName" value="" matInput required
+                          placeholder="Enter your Company name">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">Email Address</mat-label>
+                        <input formControlName="emailAdd" value="" matInput required placeholder="Enter your Email Address">
+                      </mat-form-field>
+                    </div>
+
+                  </div>
+                  <div class="row">
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">Password</mat-label>
+                        <input formControlName="password" value="" matInput required
+                          placeholder="Enter Password">
+                      </mat-form-field>
+                    </div>
+
+                    <div class="col-6">
+                      <mat-form-field appearance="legacy">
+                        <mat-label class="accent">Phone Number</mat-label>
+                        <input formControlName="phoneNo" value="" matInput required placeholder="Enter your Phone Number">
+                      </mat-form-field>
+                    </div>
+
+                  </div>
+
+                  <div class="row" style="padding: 32px 0 0 0;">
+                    <mat-checkbox formControlName="agreement">I have read and agree to the <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a></mat-checkbox>
+                  </div>
+                  <div class="row" style="padding: 4px 0 0 0;">
+                    <mat-checkbox formControlName="agreement">I agree to receive emails from TYASuite</mat-checkbox>
+                  </div>
+                  <div class="row" style="padding: 4px 0 0 0; justify-content: center;">
+                    <button mat-raised-button style="width: 96px; height: 40px; justify-content: center;background-color: orange;">
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
