@@ -6,11 +6,13 @@ import { AppMaterialModule } from '../Shared/Modules/app-material/app-material.m
 import { AppBootstrapModule } from '../Shared/Modules/app-bootstrap/app-bootstrap.module';
 import { SignUpPageComponent } from './User-landing-Page/sign-up-page/sign-up-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignUpPage2Component } from './User-landing-Page/sign-up-page2/sign-up-page2.component';
 
 
 @NgModule({
   declarations: [
-    SignUpPageComponent
+    SignUpPageComponent,
+    SignUpPage2Component
   ],
   imports: [
     CommonModule,

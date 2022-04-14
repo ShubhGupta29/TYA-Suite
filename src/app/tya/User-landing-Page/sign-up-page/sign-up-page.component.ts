@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface Options {
   value: string;
@@ -15,7 +16,7 @@ interface Options {
 export class SignUpPageComponent implements OnInit {
   toppings: FormGroup;
 
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private router:Router) {
     this.toppings = formBuilder.group({
       pepperoni: false,
       extracheese: false,
@@ -75,6 +76,12 @@ export class SignUpPageComponent implements OnInit {
   
   private addCheckboxesToForm() {
     this.webData.forEach(() => this.ordersFormArray.push(new FormControl(false)));
+  }
+
+  onSignUP(){
+    if(this.signUpForm.valid){
+      this.router.navigate(["signUp2"]);
+    }
   }
 
 }
