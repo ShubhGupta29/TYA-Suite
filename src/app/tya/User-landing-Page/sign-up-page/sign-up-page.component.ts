@@ -39,7 +39,11 @@ export class SignUpPageComponent implements OnInit {
       return this.signUpForm.controls.orders as FormArray;
     }
     
-  
+  checkboxList:any[]= [
+    {name: 'Equity', completed: false, color: 'primary'},
+    {name: 'Prefernce', completed: false, color: 'primary'},
+    {name: 'Debantures', completed: false, color: 'primary'},
+  ];
     options: Options[] = [
       {value: '0', viewValue: 'Option 1'},
       {value: '1', viewValue: 'Option 2'},
@@ -60,7 +64,7 @@ export class SignUpPageComponent implements OnInit {
       objectOfCompany:['',Validators.required],
       gstNo:['',Validators.required],
       companyHaving:['',Validators.required],
-      typesOfShares:new FormArray([]),
+      typesOfShares:['',Validators.required],
       listed:['',Validators.required],
     });
 

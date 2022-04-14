@@ -106,21 +106,21 @@
                       <br>
                       <div class="row">
                         <div class="col-4">
-                          <mat-label class="accent">Company Having</mat-label>
+                          <mat-label class="accent" style="float: left;padding: 8px;">Company Having</mat-label>
+                          <br>
 
-                          <br><br>
                           <mat-radio-group aria-label="Select an option" formControlName="companyHaving">
-                            <mat-radio-button value="1">Option 1</mat-radio-button>
+                            <mat-radio-button value="Holding Company" style="float: left;">Holding Company</mat-radio-button>
                             <br>
-                            <mat-radio-button value="2">Option 2</mat-radio-button>
+                            <mat-radio-button value="Subsidary Company" style="float: left;">Subsidary Company</mat-radio-button>
                             <br>
-                            <mat-radio-button value="3">Option 2</mat-radio-button>
+                            <mat-radio-button value="both" style="float: left;">Both</mat-radio-button>
 
                           </mat-radio-group>
 
                         </div>
-                        <div class="col-4" style="align-content: flex-start;">
-                          Types of shares
+                        <div class="col-4" style="align-content: flex-start; float: left;padding: 8px;">
+                          Types of Shares
                           <!-- <div>
                               <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" />
@@ -135,14 +135,16 @@
                                 <label for="acceptTerms" class="form-check-label">Debantures</label>
                               </div>
                             </div> -->
-                          <section class="example-section align-left" [formGroup]="toppings"
-                            style="align-content: flex-end;">
-                            <mat-checkbox formControlName="pepperoni">Pepperoni</mat-checkbox>
-                            <br>
-                            <mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox>
-                            <br>
-                            <mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox>
-                          </section>
+                            <span>
+                                <ul style="list-style-type: none; float: left;">
+                                  <li *ngFor="let subtask of checkboxList">
+                                    <mat-checkbox formControlName="typesOfShares"
+                                                  [color]="subtask.color" style="float: left;">
+                                      {{subtask.name}}
+                                    </mat-checkbox>
+                                  </li>
+                                </ul>
+                              </span>
                           <!-- <label formArrayName="orders" *ngFor="let order of ordersFormArray.controls; let i = index">
                               <mat-checkbox [formControlName]="i">  
                                 {{webData[i].name}}
@@ -152,18 +154,20 @@
 
                         </div>
                         <div class="col-4">
-                          Listed
-                          <div>
-                            <div class="form-group form-check">
-                              <input type="checkbox" class="form-check-input" />
-                              <label for="acceptTerms" class="form-check-label">Yes</label>
-                            </div>
-                            <div class="form-group form-check">
-                              <input type="checkbox" class="form-check-input" />
-                              <label for="acceptTerms" class="form-check-label">No</label>
-                            </div>
+                            <mat-label class="accent" style="float: left;padding: 8px;">Listed</mat-label>
+                            <br>
+                            <br>
+                            <mat-radio-group aria-label="Select an option" formControlName="companyHaving">
+                                <div class="row">
+                                    <mat-radio-button value="Yes" style="float: left;">Yes</mat-radio-button>
 
-                          </div>
+                                </div>
+                              <div class="row">
+
+                                  <mat-radio-button value="No" style="float: left;">No</mat-radio-button>
+                              </div>
+                              <br>
+                              </mat-radio-group>
                         </div>
 
                       </div>
