@@ -80,7 +80,7 @@ export class SignUpPageComponent implements OnInit {
 
   onSignUP(){
     if(this.signUpForm.valid){
-      this.router.navigate(["signUp2"]);
+      this.router.navigate(["tya/signUp2"]);
     }
   }
 
