@@ -6,3 +6,31 @@
     left: 30%;
     
 }
+
+  .circle1 {
+    width: 90px;
+    height: 90px;
+    background: rgb(85, 183, 192);
+    border-radius: 50%
+  }
+
+  .circle2 {
+    width: 90px;
+    height: 90px;
+    background: rgb(214, 153, 55);
+    border-radius: 50%
+  }
+
+  .circle3 {
+    width: 90px;
+    height: 90px;
+    background: rgb(145, 77, 184);
+    border-radius: 50%
+  }
+
+  .circle4 {
+    width: 90px;
+    height: 90px;
+    background: rgb(157, 197, 64);
+    border-radius: 50%
+  }
