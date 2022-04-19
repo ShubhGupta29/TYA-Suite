@@ -7,12 +7,14 @@ import { AppBootstrapModule } from '../Shared/Modules/app-bootstrap/app-bootstra
 import { SignUpPageComponent } from './User-landing-Page/sign-up-page/sign-up-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpPage2Component } from './User-landing-Page/sign-up-page2/sign-up-page2.component';
+import { SignUpPage3Component } from './User-landing-Page/sign-up-page3/sign-up-page3.component';
 
 
 @NgModule({
   declarations: [
     SignUpPageComponent,
-    SignUpPage2Component
+    SignUpPage2Component,
+    SignUpPage3Component
   ],
   imports: [
     CommonModule,
